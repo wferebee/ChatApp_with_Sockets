@@ -12,8 +12,11 @@
 </head>
 
 <body>
+    
+
 
 <h1> Hello World</h1>
+
 <!--
   
 JS: ✔ 
@@ -33,10 +36,16 @@ BootStrap: ✔
     integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
   </script>
 
-<!-- Just the main js file -->
-  <script rel="text/js" src="../js/index.js"></script>
+
 <!-- Just the main JQ file -->
   <script rel="text/js" src="../js/JQuery.js"></script>
+  
+<!-- Socket file and instantiation -->
+  <script src = "/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+  </script>
+
 </body>
 
 </html>
