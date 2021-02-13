@@ -18,14 +18,16 @@ app.get("/", (req, res, next) => { // Just setting up to route to the main index
 })
 
 
+var clients = 0;
 io.on('connection', function(socket) {
-    console.log('\n A user connected \n');
- 
-    //Whenever someone disconnects this piece of code executed
-    socket.on('disconnect', function () {
-       console.log('\n A user disconnected \n');
-    });
- });
+   clients++;
+   socket.emit('newclientconnect',{ description: 'Hey, welcome!'});
+   socket.broadcast.emit('newclientconnect',{ description: clients + ' clients connected!'})
+   socket.on('disconnect', function () {
+      clients--;
+      socket.broadcast.emit('newclientconnect',{ description: clients + ' clients connected!'})
+   });
+});
 
 
 

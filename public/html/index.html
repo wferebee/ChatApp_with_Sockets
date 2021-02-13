@@ -39,12 +39,16 @@ BootStrap: ✔
 
 <!-- Just the main JQ file -->
   <script rel="text/js" src="../js/JQuery.js"></script>
-  
+
 <!-- Socket file and instantiation -->
   <script src = "/socket.io/socket.io.js"></script>
-  <script>
-    var socket = io();
-  </script>
+   <script>
+      var socket = io();
+      socket.on('newclientconnect',function(data) {
+         document.body.innerHTML = '';
+         document.write(data.description);
+      });
+   </script>
 
 </body>
 
