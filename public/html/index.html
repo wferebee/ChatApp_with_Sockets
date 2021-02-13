@@ -15,7 +15,12 @@
     
 
 
-<h1> Hello World</h1>
+  <div id = "error-container"></div>
+  <input id = "name" type = "text" name = "name" value = "" 
+     placeholder = "Enter your name!">
+  <button type = "button" name = "button" onclick = "setUsername()">
+     Let me chat!
+  </button>
 
 <!--
   
@@ -36,19 +41,9 @@ BootStrap: ✔
     integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
   </script>
 
-
-<!-- Just the main JQ file -->
-  <script rel="text/js" src="../js/JQuery.js"></script>
-
 <!-- Socket file and instantiation -->
   <script src = "/socket.io/socket.io.js"></script>
-   <script>
-      var socket = io();
-      socket.on('newclientconnect',function(data) {
-         document.body.innerHTML = '';
-         document.write(data.description);
-      });
-   </script>
+   <script src = "../js/sockets.js"></script>
 
 </body>
 
