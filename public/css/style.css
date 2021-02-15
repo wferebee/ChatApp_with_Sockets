@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+}
+
+
+#coolOne{
+    margin-top: 5vh;
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+    min-height: 90vh;
+    overflow: auto;
+}
+
+#headerContainer{
+    margin-top: 5vh;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(145, 255, 0);
+    min-height: 10vh;
+    max-height: auto;
+ 
+    
+     
+}
+
+#username{
+
+  
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(0, 89, 255);
+
+    margin-top: 1rem;
+
+    overflow-x: hidden;
+  height: 100%;
+ 
+
+}
+
+#name{
+   width: auto;
+   
+}
+
+#button{
+    width: 90px;
+    
+    font-size: .1vw;
+}
+
+#textAreaRow{
+    height:70vh;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 187, 0);
+    
+}
+
+#textAreaCol{
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 0, 149);
+   height: 75%;
+   width: 75%;
+   margin-top: 5vh;
+   overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+#error-container{
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(0, 89, 255);
+
+    margin-top: 1rem;
+
+    overflow-x: hidden;
+  height: 100%;
+}
+
+
+#message{
+width:36%;
+height: 20%;
+}

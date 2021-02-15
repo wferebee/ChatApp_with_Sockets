@@ -8,10 +8,13 @@ $(function () {
     var user;
     socket.on('userExists', function(data) {
       $('#error-container').html(data);
+      
     });
     socket.on('userSet', function(data) {
        user = data.username;
-       $('body').html('<input type = "text" id = "message">\
+       $('#username').hide();
+       $('#error-container').html(`<p>Username: ${user}</p>`)
+       $('#textAreaCol').html('<textarea type = "text" id = "message"></textarea>\
        <button type = "button" name = "button" onclick = "sendMessage()">Send</button>\
        <div id = "message-container"></div>');
     });
