@@ -65,8 +65,11 @@
    height: 75%;
    width: 75%;
    margin-top: 5vh;
-   overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+
     overflow-wrap: break-word;
+    overflow-y: auto;
 }
 
 #error-container{
@@ -85,3 +88,9 @@
 width:36%;
 height: 20%;
 }
+
+#chatText{
+    height: 400px;
+    width: 100vw
+}
+
