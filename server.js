@@ -27,9 +27,12 @@ app.get("/", (req, res, next) => { // Just setting up to route to the main index
 
 
 
-   res.sendFile(path.join(__dirname, '/public', '/html', 'index.html'));
+   res.sendFile(path.join(__dirname, '/public', '/html', 'login.html'));
 })
 
+
+app.get("/chat", (req, res, next) => {
+   res.sendFile(path.join(__dirname, '/public', '/html', 'chat.html'));
 
 
 var clients = 0;
@@ -70,6 +73,7 @@ io.on('connection', function (socket) {
 });
 
 
+})
 
 
 http.listen(PORT, () => {
