@@ -47,6 +47,12 @@ $(function () {
 
    });
 
+   socket.on('clientDisconnect', function (data) {
+
+      $("#inRoom").html(`<p> ${data.description} </p>`);
+
+   });
+
 
    function setFocusOnDivWithId(elementId) {
       const scrollIntoViewOptions = {

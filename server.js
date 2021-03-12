@@ -37,25 +37,26 @@ io.on('connection', function (socket) {
       if (users.indexOf(data) > -1) {
          socket.emit('userExists', data + ' username is taken! Try some other username.');
       } else {
+         clients++;
          users.push(data);
          socket.emit('userSet', {
             username: data
          });
-         clients++;
-         socket.emit('newclientconnect', {
-            description: 'Hey, welcome!'
-         });
-         socket.broadcast.emit('newclientconnect', {
-            description: clients + ' clients connected!'
-         })
-         socket.on('disconnect', function () {
-            clients--;
-            socket.broadcast.emit('newclientconnect', {
-               description: clients + ' clients connected!'
-            })
-         });
-
+         
       }
+   });
+
+   socket.emit('newclientconnect', {
+      description: 'Hey, welcome!'
+   });
+   socket.broadcast.emit('newclientconnect', {
+      description: clients + ' clients connected!'
+   })
+   socket.on('disconnect', function () {
+      clients--;
+      socket.broadcast.emit('clientDisconnect', {
+         description: clients + ' clients connected!'
+      })
    });
 
    socket.on('msg', function (data) {
