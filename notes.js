@@ -1,0 +1,4 @@
+/* need to spend time making it look nice now that its mostly utlined
+also need to add more functionality using sockets
+need to figure out some kind of conditonal rendering or figure out passport or Oauth for sign in
+ */
