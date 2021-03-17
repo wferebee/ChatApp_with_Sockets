@@ -14,7 +14,7 @@ var PORT = process.env.PORT || 3000; // PORT = 3000 or whatever the enviornmanet
 app.get("/chat", (req, res, next) => { // Just setting up to route to the main index page
    res.sendFile(path.join(__dirname, '/public', '/html', 'login.html'));
 })
-
+// need to switch these back
 
 app.get("/", (req, res, next) => {
    res.sendFile(path.join(__dirname, '/public', '/html', 'chat.html'));
