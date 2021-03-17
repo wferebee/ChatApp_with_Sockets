@@ -1,3 +1,5 @@
+
+
 $(function () {
 
    var socket = io();
@@ -5,20 +7,21 @@ $(function () {
       socket.emit('setUsername', $("#name").val());
 
    };
+
+
    var user;
    socket.on('userExists', function (data) {
       $('#error-container').html(data);
 
    });
+
+
    socket.on('userSet', function (data) {
       user = data.username;
-      $('#username').hide();
-      $('#error-container').html(`<p>Username: ${user}</p>`)
-      $('#chatText').html('<textarea type = "text" id = "message"></textarea>\
-       <button id="textButton" type = "button" name = "button" onclick = "sendMessage()">Send</button>');
-
-      $("#textAreaCol").html('<div id = "message-container"></div>')
+      buildOutChatArea(data.username) // located in DomBuilding.js
    });
+
+
    sendMessage = () => {
       var msg = $('#message').val();
       if (msg) {
@@ -28,18 +31,20 @@ $(function () {
          });
          $('#message').val(" ");
       }
-   }
+   };
+
+
    socket.on('newmsg', function (data) {
       if (user) {
          if($("#message").val("") === ''){
             /* nothing */
          }
-         $('#message-container').append('<p><b>' +
-            data.user + '</b>: ' + data.message + '</p>');
+         send_AppendMessage(data.user, data.message);
          var objDiv = $("#message-container");
          objDiv.scrollTop = objDiv.scrollHeight;
       }
-   })
+   });
+
 
    socket.on('newclientconnect', function (data) {
 
@@ -47,10 +52,11 @@ $(function () {
 
    });
 
+
    socket.on('clientDisconnect', function (data) {
 
       $("#inRoom").html(`<p> ${data.description} </p>`);
-
+     
    });
 
 
