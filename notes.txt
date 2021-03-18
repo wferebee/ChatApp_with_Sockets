@@ -4,9 +4,6 @@ dark theme option
 
 db for users
 
-
-notifications for new users and existing users
-
 charachter limit for text area
 
 stop XSS attacks

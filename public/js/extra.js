@@ -1,17 +1,18 @@
 $($(function () {
 
-  const loginToggle = $("#loginToggle");
-  const signUpToggle = $("#signUpToggle");
-  const logoToggle = $("#willChatLogoHeader");
 
-  const isSignUpToggled = false;
 
-  const signUpRow = $("#signUpRow")
-  const loginRow = $("#logInRow")
+  var signUpRow = $("#signUpRow")
+  var loginRow = $("#logInRow")
   signUpRow.hide();
   loginRow.hide();
 
 
+  var loginToggle = $("#loginToggle");
+  var signUpToggle = $("#signUpToggle");
+  var logoToggle = $("#willChatLogoHeader");
+
+  var isSignUpToggled = false;
 
   signUpToggle.on("click", function () {
 
@@ -28,7 +29,7 @@ $($(function () {
     }
   });
 
-  const isloginToggled = false;
+  var isloginToggled = false;
   loginToggle.on("click", function () {
     logoToggle.hide();
     if (isloginToggled === false) {
@@ -43,3 +44,5 @@ $($(function () {
     }
   });
 }));
+
+
