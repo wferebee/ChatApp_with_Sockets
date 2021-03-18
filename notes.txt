@@ -8,3 +8,11 @@ charachter limit for text area
 stop XSS attacks ---express has a package that helps snaitize
 
 need a sign out page
+
+
+create a sign up page,a sign in page, a log out button that takes you to login page
+login page needs a button to go back to signup page and vice versa
+
+get rid of js-extras
+
+style chat page
