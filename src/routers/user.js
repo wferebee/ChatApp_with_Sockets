@@ -9,17 +9,25 @@ const router = express.Router()
 
 
 router.get("/", (req, res, next)=> {
+    res.sendFile(path.join(__dirname + '../../../public/html/welcome.html'));
+})
+
+router.get("/login", (req, res, next)=> {
     res.sendFile(path.join(__dirname + '../../../public/html/login.html'));
 })
-router.post('/new-users', async (req, res) => {
+router.get("/signup", (req, res, next)=> {
+    res.sendFile(path.join(__dirname + '../../../public/html/signup.html'));
+})
+
+
+router.post('/signup', async (req, res) => {
     // Create a new user
     try {
         const user = new User(req.body)
         await user.save()
         const token = await user.generateAuthToken()
 
-        req.session.message = 'Now you may Login';
-        return res.redirect("/");
+        return res.redirect("/login");
        
     } catch (error) {
         return res.redirect("/");

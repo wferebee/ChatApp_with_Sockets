@@ -97,10 +97,10 @@ height: 20%;
 #introPageContainer{
     background-color: brown;
     min-width: 100%;
-   min-height: 60vh;
-   height: 90vh;
+   min-height: 100vh;
+   height: 100%;
    max-width: 100vw;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     margin: 20%, 10%, 0, 10%;
 /*     border-style: solid;
 border-color: black;
@@ -114,6 +114,7 @@ border-color: black;
 border-width: 2px; */
 margin:auto;
 margin-top: 0;
+margin-bottom: 40px;
 width: 40vw;
 min-height: 25vh;
 

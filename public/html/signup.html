@@ -17,18 +17,22 @@
   <div id="introPageContainer" class="container">
   
       
-    
     <a href="/"> <button  id="signUpToggle" type="button" class="btn btn-success">Home</button></a>
-    <a href="/signup"> <button  id="signUpToggle" type="button" class="btn btn-primary">Sign Up</button></a>
+   <a href="/login"> <button id="loginToggle" type="button" class="btn btn-warning">Login</button></a>
 
-
-    <div id="logInRow" class="row">
-      <div id="loginBox" class="col-xs-4 offset-4">
-        <form action="/login" method="post" style="border:1px solid #ccc">
+<!--     <div id = "willChatLogo" class="col-sx-4 offset-4"><h1 id="willChatLogoHeader"><b>WillChat</b></h1></div>
+    <p>Please Login after you have cretaed an account if you have not already done so</p> -->
+    <div id="signUpRow" class="row">
+      <div id="signupBox" class="col-xs-6 offset-3">
+        <form action="/signup" method="post" style="border:1px solid #ccc">
           <div class="container">
-            <h1>Login</h1>
-            <p>Welcome Back</p>
+            <h1>Sign Up</h1>
+          
             <hr>
+        
+            <label for="email"><b>Name</b></label>
+            <input type="text" placeholder="Enter name" name="name" required>
+        
             <label for="psw"><b>Email</b></label>
             <input type="email" placeholder="Enter Email" name="email" required>
 
@@ -37,7 +41,7 @@
         
             <div class="clearfix">
 
-              <button type="submit" class="signupbtn">Login</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
             </div>
           </div>
         </form>
@@ -47,7 +51,7 @@
  
   <!-- newest uncompressed JQuery - maybe ge the slim or minified version, just look it up -->
 
-<!--     <script src="../js/extra.js"></script> -->
+ <!--    <script src="../js/extra.js"></script> -->
    
 
   
