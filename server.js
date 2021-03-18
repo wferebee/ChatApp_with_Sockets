@@ -16,9 +16,7 @@ app.use(express.json())
 app.use(morgan("dev"));
 app.use(express.static('public')); // to serve static files
 app.use(express.urlencoded({ extended: true }));
-app.use(userRouter, (req, res, next) => {
-   
-})
+app.use(userRouter);
 
 http.listen(PORT, () => {
    console.log('listening on *:3000');
