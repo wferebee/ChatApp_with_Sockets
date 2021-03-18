@@ -2,8 +2,9 @@ need to add colors for user names
 
 dark theme option
 
-db for users
 
 charachter limit for text area
 
-stop XSS attacks
+stop XSS attacks ---express has a package that helps snaitize
+
+need a sign out page
