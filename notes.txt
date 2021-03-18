@@ -19,3 +19,5 @@ style chat page
 
 add auth middleware for error logging and redirection
 
+
+git rid of extra controllers
