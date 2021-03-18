@@ -16,3 +16,6 @@ login page needs a button to go back to signup page and vice versa
 get rid of js-extras
 
 style chat page
+
+add auth middleware for error logging and redirection
+
