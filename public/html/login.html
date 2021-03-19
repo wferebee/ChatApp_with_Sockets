@@ -12,19 +12,16 @@
 
 <body>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <div id="introPageContainer" class="container">
-  
-      
-    
-    <a href="/"> <button  id="signUpToggle" type="button" class="btn btn-success">Home</button></a>
-    <a href="/signup"> <button  id="signUpToggle" type="button" class="btn btn-primary">Sign Up</button></a>
 
+    <a href="/"> <button id="signUpToggle" type="button" class="btn btn-success">Home</button></a>
+    <a href="/signup"> <button id="signUpToggle" type="button" class="btn btn-primary">Sign Up</button></a>
 
     <div id="logInRow" class="row">
       <div id="loginBox" class="col-xs-4 offset-4">
-        <form action="/login" method="post" style="border:1px solid #ccc">
+        <form action="/chat" method="post" style="border:1px solid #ccc">
           <div class="container">
             <h1>Login</h1>
             <p>Welcome Back</p>
@@ -34,7 +31,7 @@
 
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="password" required>
-        
+
             <div class="clearfix">
 
               <button type="submit" class="signupbtn">Login</button>
@@ -44,13 +41,7 @@
       </div>
     </div>
   </div>
- 
-  <!-- newest uncompressed JQuery - maybe ge the slim or minified version, just look it up -->
 
-<!--     <script src="../js/extra.js"></script> -->
-   
-
-  
 </body>
 
 </html>

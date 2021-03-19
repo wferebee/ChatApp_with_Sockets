@@ -13,12 +13,45 @@
 </head>
 
 <body>
+
+  <script>
+    function getCookie() {
+      console.log(document.cookie)
+      var bearer = 'Bearer ' + document.cookie;
+      fetch('/', {
+          method: 'POST',
+          withCredentials: true,
+          credentials: 'include',
+          headers: {
+            'Authorization': bearer,
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+        })
+        .then(window.location.href = "/")
+        .catch(err => {
+          console.log(err)
+        })
+    }
+  </script>
+
+
+
   <div id="bootContainer" class="container-fluid">
+
+
+
+    <button type="submit" class="logoutButton" onclick="getCookie()">Log Out</button>
+
+
     <div class="row">
       <div id="coolOne" class="col-sm-10 offset-sm-1">
         <p id="inRoom"></p>
-        
-        <!--                                                  -----------------------------------------                                   -->
+
+
         <div id="headerContainer" class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
@@ -35,48 +68,31 @@
             </div>
           </div>
 
+        </div>
 
-  
-
-        
-
-
-
-       
-
-
-
-        <!--                                                  -----------------------------------------                                   -->
-
-      
-      
-      </div>
-    
-      <div id="textAreaRow" class="row">
-        <div  id="textAreaCol" class="col-sm-10 offset-sm-1">
+        <div id="textAreaRow" class="row">
+          <div id="textAreaCol" class="col-sm-10 offset-sm-1">
             Chat area
+          </div>
+          <div id="chatText"></div>
         </div>
-        <div id="chatText" ></div>
-        </div>
-        
+
+      </div>
+
+
     </div>
- 
-    
-  </div>
- 
 
 
+    <!-- newest uncompressed JQuery - maybe ge the slim or minified version, just look it up -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
+    <!-- Socket file and instantiation -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/DomBuilding.js"></script>
+    <!-- This must come before the sockets.js script so Sockets.js has acces tot the functions in this script -->
+    <script src="../js/sockets.js"></script>
 
-  <!-- newest uncompressed JQuery - maybe ge the slim or minified version, just look it up -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-
-  <!-- Socket file and instantiation -->
-  <script src = "/socket.io/socket.io.js"></script>
-  <script src="../js/DomBuilding.js"></script> <!-- This must come before the sockets.js script so Sockets.js has acces tot the functions in this script -->
-  <script src="../js/sockets.js"></script>
-  
 
 </body>
 

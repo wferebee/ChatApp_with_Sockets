@@ -199,3 +199,7 @@ button:hover {
 #willChatLogoHeader{
     font-size: 100px;
 }
+
+.logoutButton{
+  width: 100px;
+}
