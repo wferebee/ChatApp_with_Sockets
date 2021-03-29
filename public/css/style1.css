@@ -1,0 +1,86 @@
+
+
+.row {
+/*     border-style: solid;
+    border-width: 2px;
+    border-color: black; */
+}
+.col{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(187, 26, 26);
+}
+
+#row1, #row2, #row4{
+    height: 10vh;
+    margin-top: 4vh;
+}
+
+#row1{
+    height: auto;
+}
+
+#row3{
+    height: auto;
+    margin-top: 4vh;
+}
+
+#row3{
+    height: 55vh;
+}
+
+
+
+
+#chatBoxCol{
+    padding-top: 4px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 0, 149);
+   height: 100%;
+   width: 96%;
+   margin-top: 2%;
+   margin-bottom: 2%;
+   margin-left: 2%;
+  display: flex;
+  flex-direction: column-reverse;
+
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    background-color: black;
+}
+
+#chatText{
+    height: 100%;
+    margin-left: 10%;
+}
+textarea{
+    width: 80%;
+    margin-top: 3px;
+    height: auto;
+}
+
+
+
+.col-xs-12{
+width: auto;
+margin-left: 2vw;
+}
+
+#username{
+    height: auto;
+}
+
+#chatHidden{
+    text-align: center;
+    line-height: 50vh;
+}
+
+
+#textSent{
+color:rgb(187, 26, 26)
+}
+
+#usernameText{
+color: green;
+}
