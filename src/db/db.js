@@ -1,8 +1,8 @@
 
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
-})
+mongoose.connect("mongodb://localhost:27017/users", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
