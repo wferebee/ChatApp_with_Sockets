@@ -1,11 +1,12 @@
 const express = require('express');
+require('dotenv').config()
 const path = require('path'); // to serve specific files whennroutes are hit
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser')
 const userRouter = require('./src/routers/user')
-const PORT = 4000
+const PORT = process.env.PORT
 require('./src/db/db')
-require('dotenv').config()
+
 
 const app = express();
 const http = require('http').Server(app);
